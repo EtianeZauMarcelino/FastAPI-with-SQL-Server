@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "fastapi with sql server"
+version = "0.1.0"
+description = ""
+authors = ["Etiane Marcelino <etianezaumarcelino@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.111.0"
+uvicorn = "^0.29.0"
+pandas = "^2.2.2"
+pyodbc = "^5.1.0"
+black = "^24.4.2"
+isort = "^5.13.2"
+pydantic = "^2.7.1"
+pandera = {extras = ["io"], version = "^0.19.3"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
