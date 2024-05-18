@@ -4,7 +4,7 @@ import pandas as pd
 import pandera as pa
 
 
-db = SQl_Server_Connection(dbname='AdventureWorks2019', user='etiane', password='HPeNG4g7D4JbdSk3qgup')
+db = SQl_Server_Connection(dbname='AdventureWorks2019', user='my_user', password='my_pass')
 
 def get_persons(Person_Id:int):
     db.connect()
@@ -30,10 +30,6 @@ def get_persons(Person_Id:int):
 
 if __name__ == '__main__':
     try:
-        # db = SQl_Server_Connection(dbname='AdventureWorks2019', user='etiane', password='HPeNG4g7D4JbdSk3qgup')
-        # db.connect()
-        # print(db.get_person(Person_Id=8))
-
         df = get_persons()
 
         schema_AdventureWorks = pa.infer_schema(df)
